@@ -10,12 +10,171 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/category.css">
 </head>
 <body>
-    PEGAR A CATEGORIA SELECIONADA VIA LOCALSTORAGE -> ALTERAR TITLE TAMBEM
-    DEVE TER OS PRODUTOS DISPONIVEIS QUE SÃO DA CATEGORIA ABERTA    
+    <header id="header-principal">
+        <h1 id="store-name">Lealdad Store</h1>
+
+        <div id="box-header-action">
+            <div id="box-cart">
+                <i class="icon-cart fas fa-shopping-cart"></i>
+                <span id="count-cart-item">1</span>
+            </div>
+            <div id="box-checkout">
+                <button id="checkout-button">Finalizar compra</button>
+            </div>
+        </div>
+    </header>
+
+    <nav id="categories-nav">
+        <div id="box-profile-nav">
+            <div id="box-avatar-profile">
+                <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
+            </div>
+
+            <div id="box-infos-profile">
+                <span id="name-user-profile">Olá, visitante!</span>
+                <span id="login-profile">Entrar no perfil</span>
+            </div>
+        </div>
+
+        <div id="box-categories-items-nav">
+            <div class="category-item-nav">
+                <a class="name-category-item">Início</a>
+            </div>
+            <div class="category-item-nav">
+                <a class="name-category-item">Category</a>
+            </div>
+            <div class="category-item-nav">
+                <a class="name-category-item">Category</a>
+            </div>
+            <div class="category-item-nav">
+                <a class="name-category-item">Category</a>
+            </div>
+            <div class="category-item-nav">
+                <a class="name-category-item">Category</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h1 id="title-page">Categoria</h1>
+        <h2 id="description-category">
+            Descrição da categoria
+        </h2>  
+        
+        <div class="row">
+            <div class="product-card">
+                <div class="box-image-product">
+                    <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
+                </div>
+
+                <div class="box-infos-product">
+                    <div class="box-textual">
+                        <span class="name-product">Name</span>
+                        <span class="description-product">
+                            Description
+                        </span>
+                    </div>
+
+                    <div class="box-price">
+                        <!-- <span class="price-product"><span class="monetary-text">R$</span> 49.90</span> -->
+                        <span class="price-product-has-discount"><span class="monetary-text">R$</span> 49.90</span>
+                        <span class="price-product-discount"><span class="monetary-text">R$</span> 39.50</span>
+                    </div>
+                </div>
+
+                <div class="box-add-cart">
+                    <i class="icon-add-cart fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="box-image-product">
+                    <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
+                </div>
+
+                <div class="box-infos-product">
+                    <div class="box-textual">
+                        <span class="name-product">Name</span>
+                        <span class="description-product">
+                            Description
+                        </span>
+                    </div>
+
+                    <div class="box-price">
+                        <span class="price-product"><span class="monetary-text">R$</span> 49.90</span>
+                    </div>
+                </div>
+
+                <div class="box-add-cart">
+                    <i class="icon-add-cart fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="box-image-product">
+                    <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
+                </div>
+
+                <div class="box-infos-product">
+                    <div class="box-textual">
+                        <span class="name-product">Name</span>
+                        <span class="description-product">
+                            Description
+                        </span>
+                    </div>
+
+                    <div class="box-price">
+                        <span class="price-product"><span class="monetary-text">R$</span> 49.90</span>
+                    </div>
+                </div>
+
+                <div class="box-add-cart">
+                    <i class="icon-add-cart fas fa-cart-plus"></i>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="box-image-product">
+                    <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
+                </div>
+
+                <div class="box-infos-product">
+                    <div class="box-textual">
+                        <span class="name-product">Name</span>
+                        <span class="description-product">
+                            Description
+                        </span>
+                    </div>
+
+                    <div class="box-price">
+                        <span class="price-product"><span class="monetary-text">R$</span> 49.90</span>
+                    </div>
+                </div>
+
+                <div class="box-add-cart">
+                    <i class="icon-add-cart fas fa-cart-plus"></i>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+
+
+    <!-- PEGAR A CATEGORIA SELECIONADA VIA LOCALSTORAGE -> ALTERAR TITLE TAMBEM
+    DEVE TER OS PRODUTOS DISPONIVEIS QUE SÃO DA CATEGORIA ABERTA   -->
+
+    <script src="js/global.js"></script>
 </body>
 </html>

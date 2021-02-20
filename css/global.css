@@ -40,7 +40,6 @@ a {
     justify-content: space-between;
 
     flex-wrap: wrap;
-
 }
 
 /* HEADER  */
@@ -329,7 +328,8 @@ a {
 .box-price {
     display: flex;
     flex: 0.45;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
 
     /* background-color: blue; */
 }
@@ -349,13 +349,27 @@ a {
 .monetary-text {
     font-size: 12px;
     color: rgba(0,0,0,0.5);
-
 }
 
 .price-product {
     font-weight: bold;
     font-size: 22px;
     color: #FF6347;
+    font-family: 'Rokkitt', serif;
+}
+
+.price-product-has-discount {
+    font-weight: bold;
+    font-size: 16px;    
+    color: rgba(0,0,0,0.5);
+    font-family: 'Rokkitt', serif;
+    text-decoration: line-through #FF6347;
+}
+
+.price-product-discount {
+    font-weight: bold;
+    font-size: 22px;
+    color: green;
     font-family: 'Rokkitt', serif;
 }
 

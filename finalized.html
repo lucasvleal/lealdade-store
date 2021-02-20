@@ -10,13 +10,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/finalized.css">
 </head>
 <body>
-    PAGINA DE CONFIRMAÇÃO DO PEDIDO, MOSTRAR TEMPO DE ENTREGA -> NUMERO ALEATORIO ENTRE 3 E 8
+    <header id="header-principal">
+        <h1 id="store-name">Lealdad Store</h1>
+
+        <div id="box-header-action">
+            <div id="box-cart">
+                <i class="icon-cart fas fa-shopping-cart"></i>
+                <span id="count-cart-item">1</span>
+            </div>
+            <div id="box-checkout">
+                <button id="checkout-button">Finalizar compra</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <h1 id="title-thanks">Obrigado por comprar com a gente!</h1>
+
+        <h2 id="subtitle">
+            O seu pedido já está sendo separado e em <strong>4 dias</strong>  chega para você.
+        </h2>
+
+        <div class="box-infos-delivery">
+            <span>Enviaremos sua compra para o seguinte enderço:</span>
+
+            <div class="box-address">
+                <p id="text-address">
+                    Rua Jose Kempe, 50 <br />
+                    Jardim Jequitibás II, Presidente Prudente - SP
+                </p>
+            </div>
+        </div>
+        
+
+        <h1 id="back-shopping">Voltar a comprar</h1>
+    </div>
+
+    <!-- PAGINA DE CONFIRMAÇÃO DO PEDIDO, MOSTRAR TEMPO DE ENTREGA -> NUMERO ALEATORIO ENTRE 3 E 8
     PEGA AS INFOS DO address VIA LOCAL STORAGE PARA MOSTRAR AO USUARIO, E AS INFOS DO USUARIO TAMBEM
-        '- SE FOR VISITANTE FALA VISITANTE E PA
+        '- SE FOR VISITANTE FALA VISITANTE E PA -->
+
+    <script src="js/global.js"></script>
 </body>
 </html>
