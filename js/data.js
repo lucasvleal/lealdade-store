@@ -1,4 +1,4 @@
-let dataCategories = [
+const dataCategories = [
     {
         "id": 1,
         "name": "Camisas Nacionais",
@@ -17,13 +17,13 @@ let dataCategories = [
     {
         "id": 4,
         "name": "Bermudas",
-        "description": "As melhores bermudas das melhores marcas estão aqui. Qualidade e valores incomparáveis!,
+        "description": "As melhores bermudas das melhores marcas estão aqui. Qualidade e valores incomparáveis!",
     },
 ]
 
-let dataProducts = [
+const dataProducts = [
     {
-        "id": Math.random(),
+        "id": "fa8d5d1873bf11eb94390242ac130002",
         "description": "Camisa branca atual",
         "name": "Camisa SPFC 1 2020",
         "categoryId": 1,
@@ -31,9 +31,10 @@ let dataProducts = [
         "image": "https://imgcentauro-a.akamaihd.net/900x900/94496149/camisa-do-sao-paulo-i-2020-adidas-masculina-img.jpg",
         "promotion": false,
         "priceWithDiscount": undefined,
+        "featuredProduct":true,
     },
     {
-        "id": Math.random(),
+        "id": "05444f1473c011eb94390242ac130002",
         "description": "Camisa vermelha atual",
         "name": "Camisa Bayern 1 2020",
         "categoryId": 2,
@@ -43,17 +44,18 @@ let dataProducts = [
         "priceWithDiscount": 225.90,
     },
     {
-        "id": Math.random(),
+        "id": "11e531de73c011eb94390242ac130002",
         "description": "Regata NBA preta",
         "name": "Regata Lakers Black Mamba",
         "categoryId": 3,
         "price": 249.90,
-        "image": "http://d26lpennugtm8s.cloudfront.net/stores/001/199/617/products/regata-nba-nike-swingman-los-angeles-lakers-mamba-edition-bryant-241-7a19722af154e46c0815913118187497-640-0.jpeg",
+        "image": "https://cdn.shopify.com/s/files/1/0336/9032/1035/products/1_7878da6a-9f3c-4f02-b13a-f408c562b8e6_500x.jpg?v=1602088480",
         "promotion": false,
         "priceWithDiscount": undefined,
+        "featuredProduct":true,
     },
     {
-        "id": Math.random(),
+        "id": "1c9af9b073c011eb94390242ac130002",
         "description": "Bermuda Moletom preta e branca",
         "name": "Bermuda Adidas",
         "categoryId": 4,
@@ -61,10 +63,11 @@ let dataProducts = [
         "image": "https://imgcentauro-a.akamaihd.net/1300x1300/93820702/bermuda-adidas-3g-speed-x-masculina-img.jpg",
         "promotion": true,
         "priceWithDiscount": 70.99,
+        "featuredProduct":true,
     },
 ];
 
-let dataUsers = [
+const dataUsers = [
     {
         "id": Math.random(),
         "fullName": "Lucas Viani Leal",
@@ -100,3 +103,4 @@ let dataUsers = [
         }
     },
 ]
+
