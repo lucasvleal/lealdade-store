@@ -3,7 +3,7 @@ const loadCategories = () => {
   let menuLoaded = "";
   dataCategories.forEach((dataCategorie) => {
     menuLoaded += `<div title="${dataCategorie.description}" class="category-item-nav"> 
-        <a href="./index.html?categoryId=${dataCategorie.id}" class="name-category-item">${dataCategorie.name}</a> 
+        <a href="./category.html?categoryId=${dataCategorie.id}" class="name-category-item">${dataCategorie.name}</a> 
       </div>`;
   });
 
