@@ -10,13 +10,254 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/checkout.css">
 </head>
 <body>
-    PAGINA DO CARRINHO -> VAI RECUPERAR TUDO VIA LOCALSTORAGE
+    <header id="header-principal">
+        <h1 id="store-name">Lealdad Store</h1>
+
+        <div id="box-header-action">
+            <div id="box-cart">
+                <i class="icon-cart fas fa-shopping-cart"></i>
+                <span id="count-cart-item">1</span>
+            </div>
+            <div id="box-checkout">
+                <button id="checkout-button">Finalizar compra</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="box-title">
+            <div id="box-go-back">
+                <i class="icon-go-back fas fa-chevron-left"></i>
+            </div>
+            <span id="title-page">Carrinho</span>
+        </div>
+
+        <div class="box-infos-action">
+            <div class="box-infos">
+
+                <div class="container-product">
+                    <div class="box-infos-product-card">
+                        <div class="box-image-product-card">
+                            <img src="https://imgcentauro-a.akamaihd.net/900x900/94496149/camisa-do-sao-paulo-i-2020-adidas-masculina-img.jpg">
+                        </div>
+
+                        <div class="box-text-product-card">
+                            <span class="name-product">Camisa SPFC 1 2020</span>
+                            <span class="description-product">
+                                Camisa branca atual
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="box-quantity">
+                        <button class="button-quantity"> 
+                            <i class="icon-quantity fas fa-minus"></i>
+                         </button>                        
+
+                        <span class="text-quantity">1</span>
+
+                        <button class="button-quantity">
+                            <i class="icon-quantity fas fa-plus"></i>    
+                        </button>                        
+                    </div>
+
+                    <div class="box-price-total">
+                        <span class="monetary-text">R$</span>
+                        <span class="price-product"> 249.90</span>
+                    </div>
+
+                    <div class="box-trash">
+                        <i class="icon-delete fas fa-trash-alt"></i>
+                    </div>
+                </div>
+
+                <div class="container-product">
+                    <div class="box-infos-product-card">
+                        <div class="box-image-product-card">
+                            <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
+                        </div>
+
+                        <div class="box-text-product-card">
+                            <span class="name-product">Name</span>
+                            <span class="description-product">
+                                Description
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="box-quantity">
+                        <button class="button-quantity"> 
+                            <i class="icon-quantity fas fa-minus"></i>
+                         </button>                        
+
+                        <span class="text-quantity">1</span>
+
+                        <button class="button-quantity">
+                            <i class="icon-quantity fas fa-plus"></i>    
+                        </button>                        
+                    </div>
+
+                    <div class="box-price-total">
+                        <span class="monetary-text">R$</span>
+                        <span class="price-product"> 249.90</span>
+                    </div>
+
+                    <div class="box-trash">
+                        <i class="icon-delete fas fa-trash-alt"></i>
+                    </div>
+                </div>
+
+                <!-- <div class="container-product">
+                    <div class="box-infos-product-card">
+                        <div class="box-image-product-card">
+                            <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
+                        </div>
+
+                        <div class="box-text-product-card">
+                            <span class="name-product">Name</span>
+                            <span class="description-product">
+                                Description
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="box-quantity">
+                        <button class="button-quantity"> 
+                            <i class="icon-quantity fas fa-minus"></i>
+                         </button>                        
+
+                        <span class="text-quantity">1</span>
+
+                        <button class="button-quantity">
+                            <i class="icon-quantity fas fa-plus"></i>    
+                        </button>                        
+                    </div>
+
+                    <div class="box-price-total">
+                        <span class="monetary-text">R$</span>
+                        <span class="price-product"> 249.90</span>
+                    </div>
+
+                    <div class="box-trash">
+                        <i class="icon-delete fas fa-trash-alt"></i>
+                    </div>
+                </div>
+
+                <div class="container-product">
+                    <div class="box-infos-product-card">
+                        <div class="box-image-product-card">
+                            <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
+                        </div>
+
+                        <div class="box-text-product-card">
+                            <span class="name-product">Name</span>
+                            <span class="description-product">
+                                Description
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="box-quantity">
+                        <button class="button-quantity"> 
+                            <i class="icon-quantity fas fa-minus"></i>
+                         </button>                        
+
+                        <span class="text-quantity">1</span>
+
+                        <button class="button-quantity">
+                            <i class="icon-quantity fas fa-plus"></i>    
+                        </button>                        
+                    </div>
+
+                    <div class="box-price-total">
+                        <span class="monetary-text">R$</span>
+                        <span class="price-product"> 249.90</span>
+                    </div>
+
+                    <div class="box-trash">
+                        <i class="icon-delete fas fa-trash-alt"></i>
+                    </div>
+                </div> -->
+
+            </div>
+            
+            <div class="box-action">
+                <div class="box-title-finalize">
+                    <h1 class="title-finalize">Para continuar insira seus dados</h1>
+                    <span class="text-has-account">Tem uma conta? <strong id="login-text">Entre aqui</strong></span>
+                </div>
+
+                <div class="box-form-address">
+                    <form id="form-address-checkout">
+                        <div class="row margin-row-address">
+                            <div class="box-input">
+                                <input id="street" name="street" type="text" placeholder="Insira a rua">
+                                <label for="street">Rua</label>
+                            </div>
+
+                            <div class="box-input">
+                                <input id="number" name="number" type="text" placeholder="Insira o número">
+                                <label for="number">Número</label>
+                            </div>
+                        </div>
+
+                        <div class="row margin-row-address">
+                            <div class="box-input">
+                                <input id="neighborhood" name="neighborhood" type="text" placeholder="Insira o bairro">
+                                <label for="neighborhood">Bairro</label>
+                            </div>
+
+                            <div class="box-input">
+                                <input id="city" name="city" type="text" placeholder="Insira a cidade">
+                                <label for="city">Cidade</label>
+                            </div>
+                        </div>
+
+                        <div class="row margin-row-address">
+                            <div class="box-input">
+                                <input id="uf" name="uf" type="text" placeholder="Insira o estado">
+                                <label for="uf">Estado</label>
+                            </div>
+
+                            <div class="box-input">
+                                <input id="zipcode" name="zipcode" type="text" placeholder="Insira o CEP">
+                                <label for="zipcode">CEP</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="box-finalize">
+                    <div class="box-total">                        
+                        <h1 class="text-label-total">Total:</h1>
+                        <span class="text-total"><span class="monetary-text">R$</span> 499.80</span>
+                    </div>
+
+                    <div class="box-button-finalize">
+                        <button class="button-finalize">Finalizar compra</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>         
+    </div>
+
+
+    <!-- PAGINA DO CARRINHO -> VAI RECUPERAR TUDO VIA LOCALSTORAGE
     MODAL PARA SE LOGAR -> QUANDO LOGADO PEGA AS INFOS DO address
-    CAMPOS PRA POR O ENDEREÇO MESMO SEM LOGAR   
+    CAMPOS PRA POR O ENDEREÇO MESMO SEM LOGAR    -->
+
+    <script src="js/global.js"></script>
 </body>
 </html>
