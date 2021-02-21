@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kabão Store | Nacionais & Importados</title>
+    <title>Lealdad Store | Nacionais & Importados</title>
 
     
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -22,12 +22,12 @@
 </head>
 <body>
     <header id="header-principal">
-        <h1 id="store-name">Kabão Store</h1>
+        <h1 id="store-name">Lealdad Store</h1>
 
         <div id="box-header-action">
             <div id="box-cart">
                 <i class="icon-cart fas fa-shopping-cart"></i>
-                <span id="count-cart-item"></span>
+                <span id="count-cart-item">0</span>
             </div>
             <div id="box-checkout">
                 <button id="checkout-button">Finalizar compra</button>
@@ -38,12 +38,12 @@
     <nav id="categories-nav">
         <div id="box-profile-nav">
             <div id="box-avatar-profile">
-                <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
+                <img id="avatar-profile" src="" alt="Imagem de perfil da pessoa">
             </div>
 
             <div id="box-infos-profile">
-                <span id="name-user-profile">Olá, visitante!</span>
-                <span id="login-profile">Entrar no perfil</span>
+                <span id="name-user-profile"></span>
+                <span onclick="handleLogin()" id="login-profile"></span>
             </div>
         </div>
 
@@ -51,18 +51,7 @@
             <div title="Voltar a página inicial" class="category-item-nav">
                 <a href="./index.html" class="name-category-item">Início</a>
             </div>
-            <!-- <div class="category-item-nav">
-                <a class="name-category-item">Category</a>
-            </div>
-            <div class="category-item-nav">
-                <a class="name-category-item">Category</a>
-            </div>
-            <div class="category-item-nav">
-                <a class="name-category-item">Category</a>
-            </div>
-            <div class="category-item-nav">
-                <a class="name-category-item">Category</a>
-            </div> -->
+           
         </div>
     </nav>
 
@@ -271,16 +260,35 @@
         
     </div>
 
-    <!-- DEVE TER OS PRODUTOS DISPONIVEIS -> COLOCAR 1 DE CADA CATEGORIA COMO OS ~DESTAQUES~
-        '- UM CARD COM AS INFOS E UM BOTAO PARA ADICIONAR AO CARRINHO
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span onclick="closeModal()" class="close">&times;</span>
+                <h2>Login</h2>
+            </div>
 
-    HEADER COM NOME DO SITE, ICONE DO CARRINHO E BOTAO PRA FINALIZAR COMPRA E UMA BARRA DE BUSCA PRA BUSCAR POR NOME
-    MENU LATERAL COM AS CATEGORIAS -> FILTRA OS PRODUTOS QUE ESTAO NUMA CATEGORIA ESPECIFICA
+            <div class="modal-body">
+                <form id="form-login">
+                    <div class="box-input" style="margin-bottom: 30px;">
+                        <input id="email" name="email" type="text" placeholder="Insira o email">
+                        <label for="email">Email</label>
+                    </div>
 
-    MENU LATERAL E HEADER VAO SE REPETIR -->  
+                    <div class="box-input">
+                        <input id="password" name="password" type="password" placeholder="Insira a senha">
+                        <label for="password">Senha</label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button onclick="login()" id="button-login">Logar</button>
+            </div>
+        </div>    
+    </div>
+
     <script src="js/data.js"></script>
     <script src="js/initial.js"></script>
-    <script src="js/global.js"></script>
-    
+    <script src="js/global.js"></script>    
 </body>
 </html>

@@ -27,7 +27,7 @@
         <div id="box-header-action">
             <div id="box-cart">
                 <i class="icon-cart fas fa-shopping-cart"></i>
-                <span id="count-cart-item">1</span>
+                <span id="count-cart-item"></span>
             </div>
             <div id="box-checkout">
                 <button id="checkout-button">Finalizar compra</button>
@@ -38,7 +38,9 @@
     <div class="content">
         <div class="box-title">
             <div id="box-go-back">
-                <i class="icon-go-back fas fa-chevron-left"></i>
+                <a href="./index.html">
+                    <i class="icon-go-back fas fa-chevron-left"></i>
+                </a>
             </div>
             <span id="title-page">Carrinho</span>
         </div>
@@ -46,7 +48,7 @@
         <div class="box-infos-action">
             <div class="box-infos">
 
-                <div class="container-product">
+                <!-- <div class="container-product">
                     <div class="box-infos-product-card">
                         <div class="box-image-product-card">
                             <img src="https://imgcentauro-a.akamaihd.net/900x900/94496149/camisa-do-sao-paulo-i-2020-adidas-masculina-img.jpg">
@@ -116,7 +118,7 @@
                     <div class="box-trash">
                         <i class="icon-delete fas fa-trash-alt"></i>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- <div class="container-product">
                     <div class="box-infos-product-card">
@@ -195,7 +197,7 @@
             <div class="box-action">
                 <div class="box-title-finalize">
                     <h1 class="title-finalize">Para continuar insira seus dados</h1>
-                    <span class="text-has-account">Tem uma conta? <strong id="login-text">Entre aqui</strong></span>
+                    <span onclick="handleLoginCheckout()"  class="text-has-account"></span>
                 </div>
 
                 <div class="box-form-address">
@@ -241,11 +243,11 @@
                 <div class="box-finalize">
                     <div class="box-total">                        
                         <h1 class="text-label-total">Total:</h1>
-                        <span class="text-total"><span class="monetary-text">R$</span> 499.80</span>
+                        <span class="text-total"></span>
                     </div>
 
                     <div class="box-button-finalize">
-                        <button class="button-finalize">Finalizar compra</button>
+                        <button onclick="handleFinalizeShop()" class="button-finalize">Finalizar compra</button>
                     </div>
                 </div>
 
@@ -253,11 +255,36 @@
         </div>         
     </div>
 
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span onclick="closeModal()" class="close">&times;</span>
+                <h2>Login</h2>
+            </div>
 
-    <!-- PAGINA DO CARRINHO -> VAI RECUPERAR TUDO VIA LOCALSTORAGE
-    MODAL PARA SE LOGAR -> QUANDO LOGADO PEGA AS INFOS DO address
-    CAMPOS PRA POR O ENDEREÇO MESMO SEM LOGAR    -->
+            <div class="modal-body">
+                <form id="form-login">
+                    <div class="box-input" style="margin-bottom: 30px;">
+                        <input id="email" name="email" type="text" placeholder="Insira o email">
+                        <label for="email">Email</label>
+                    </div>
 
+                    <div class="box-input">
+                        <input id="password" name="password" type="password" placeholder="Insira a senha">
+                        <label for="password">Senha</label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button onclick="login()" id="button-login">Logar</button>
+            </div>
+        </div>    
+    </div>
+
+
+    <script src="js/data.js"></script>
+    <script src="js/checkout.js"></script>
     <script src="js/global.js"></script>
 </body>
 </html>

@@ -1,10 +1,17 @@
-const loadProductsWithCategorized = (categoryId) =>{
+const loadProductsWithCategorized = (categoryId) => {
   const featuredProducts = document.getElementById('featured-product');
+
+  const titleCategory = document.getElementById('title-page');
+  const descriptionCategory = document.getElementById('description-category');
+
+  const category = dataCategories.find(categoryFind => categoryFind.id === parseInt(categoryId));
+
   const filteredCategories = dataProducts.filter(dataProduct => 
       dataProduct.categoryId === parseInt(categoryId)
-    );
+  );
+
   let categoryProducts = '';
-  console.log(dataProducts);
+
   filteredCategories.forEach(filtered => {
     categoryProducts += `
     <div class="product-card">
@@ -36,7 +43,11 @@ const loadProductsWithCategorized = (categoryId) =>{
       <i class="icon-add-cart fas fa-cart-plus"></i>
     </div>
   </div>
-    `
+    `  
   });
+
   featuredProducts.innerHTML = categoryProducts;
+
+  titleCategory.innerHTML = category.name;
+  descriptionCategory.innerHTML = category.description;
 }

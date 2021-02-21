@@ -27,7 +27,7 @@
         <div id="box-header-action">
             <div id="box-cart">
                 <i class="icon-cart fas fa-shopping-cart"></i>
-                <span id="count-cart-item">1</span>
+                <span id="count-cart-item"></span>
             </div>
             <div id="box-checkout">
                 <button id="checkout-button">Finalizar compra</button>
@@ -39,28 +39,23 @@
         <h1 id="title-thanks">Obrigado por comprar com a gente!</h1>
 
         <h2 id="subtitle">
-            O seu pedido já está sendo separado e em <strong>4 dias</strong>  chega para você.
+            
         </h2>
 
         <div class="box-infos-delivery">
             <span>Enviaremos sua compra para o seguinte enderço:</span>
 
             <div class="box-address">
-                <p id="text-address">
-                    Rua Jose Kempe, 50 <br />
-                    Jardim Jequitibás II, Presidente Prudente - SP
-                </p>
+                <p id="text-address"></p>
             </div>
         </div>
         
 
-        <h1 id="back-shopping">Voltar a comprar</h1>
+        <h1 onclick="backToShopping()" id="back-shopping">Voltar a comprar</h1>
     </div>
 
-    <!-- PAGINA DE CONFIRMAÇÃO DO PEDIDO, MOSTRAR TEMPO DE ENTREGA -> NUMERO ALEATORIO ENTRE 3 E 8
-    PEGA AS INFOS DO address VIA LOCAL STORAGE PARA MOSTRAR AO USUARIO, E AS INFOS DO USUARIO TAMBEM
-        '- SE FOR VISITANTE FALA VISITANTE E PA -->
-
+    <script src="js/data.js"></script>
+    <script src="js/finalized.js"></script>
     <script src="js/global.js"></script>
 </body>
 </html>

@@ -62,6 +62,29 @@ body {
     /* background-color: greenyellow; */
 }
 
+.box-no-products {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.title-no-products {
+    font-size: 48px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.subtitle-no-products {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.3);
+    text-align: center;
+}
+
 
 /* CARD PRODUTO CART  */
 .container-product {

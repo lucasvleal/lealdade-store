@@ -27,7 +27,7 @@
         <div id="box-header-action">
             <div id="box-cart">
                 <i class="icon-cart fas fa-shopping-cart"></i>
-                <span id="count-cart-item">1</span>
+                <span id="count-cart-item"></span>
             </div>
             <div id="box-checkout">
                 <button id="checkout-button">Finalizar compra</button>
@@ -38,39 +38,26 @@
     <nav id="categories-nav">
         <div id="box-profile-nav">
             <div id="box-avatar-profile">
-                <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
+                <img id="avatar-profile" src="" alt="Imagem de perfil da pessoa">
             </div>
 
             <div id="box-infos-profile">
-                <span id="name-user-profile">Olá, visitante!</span>
-                <span id="login-profile">Entrar no perfil</span>
+                <span id="name-user-profile"></span>
+                <span onclick="handleLogin()" id="login-profile"></span>
             </div>
         </div>
 
         <div id="box-categories-items-nav">
             <div class="category-item-nav">
-                <a class="name-category-item">Início</a>
+                <a href="./index.html" class="name-category-item">Início</a>
             </div>
-            <!-- <div class="category-item-nav">
-                <a class="name-category-item">Category</a>
-            </div>
-            <div class="category-item-nav">
-                <a class="name-category-item">Category</a>
-            </div>
-            <div class="category-item-nav">
-                <a class="name-category-item">Category</a>
-            </div>
-            <div class="category-item-nav">
-                <a class="name-category-item">Category</a>
-            </div> -->
+            
         </div>
     </nav>
 
     <div class="content">
-        <h1 id="title-page">Categoria</h1>
-        <h2 id="description-category">
-            Descrição da categoria
-        </h2>  
+        <h1 id="title-page"></h1>
+        <h2 id="description-category"></h2>  
         
         <div class="row" id="featured-product">
            
@@ -80,8 +67,33 @@
     </div>
 
 
-    <!-- PEGAR A CATEGORIA SELECIONADA VIA LOCALSTORAGE -> ALTERAR TITLE TAMBEM
-    DEVE TER OS PRODUTOS DISPONIVEIS QUE SÃO DA CATEGORIA ABERTA   -->
+    <div id="modal-login" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span onclick="closeModal()" class="close">&times;</span>
+                <h2>Login</h2>
+            </div>
+
+            <div class="modal-body">
+                <form id="form-login">
+                    <div class="box-input" style="margin-bottom: 30px;">
+                        <input id="email" name="email" type="text" placeholder="Insira o email">
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="box-input">
+                        <input id="password" name="password" type="password" placeholder="Insira a senha">
+                        <label for="password">Senha</label>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button onclick="login()" id="button-login">Logar</button>
+            </div>
+        </div>    
+    </div>
+
     <script src="js/data.js"></script>
     <script src="js/global.js"></script>
     <script src= "js/category.js"></script>

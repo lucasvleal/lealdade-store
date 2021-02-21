@@ -1,12 +1,16 @@
 const loadProducts = () => {
   const featuredProducts = document.getElementById('featured-product');
+
   const promotionalProducts = document.getElementById('promotional')
 
   let featured = '';
+
   let promotional = '';
 
-  dataProducts.forEach((product) => {
+  dataProducts.forEach((product) => {    
     if(product.featuredProduct){
+      console.log('featured: ', product.name);
+
       featured += `
         <div class="product-card">
           <div class="box-image-product">
@@ -40,34 +44,40 @@ const loadProducts = () => {
       `;
     }
 
-    promotional = `
-    <div class="product-card">
-      <div class="box-image-product">
-        <img src="${product.image}" alt="Imagem de perfil da pessoa">
-      </div>
+    if(product.promotion) {
+      console.log('promotion: ', product.name);
 
-      <div class="box-infos-product">
-        <div class="box-textual">
-          <span class="name-product">${product.name}</span>
-          <span class="description-product">
-            ${product.description}
-          </span>
+      promotional = `
+      <div class="product-card">
+        <div class="box-image-product">
+          <img src="${product.image}" alt="Imagem de perfil da pessoa">
         </div>
-
-        <div class="box-price">
-          <span class="price-product-has-discount"><span class="monetary-text">R$</span> ${product.price}</span>
-          <span class="price-product-discount"><span class="monetary-text">R$</span> ${product.priceWithDiscount}</span>
+  
+        <div class="box-infos-product">
+          <div class="box-textual">
+            <span class="name-product">${product.name}</span>
+            <span class="description-product">
+              ${product.description}
+            </span>
+          </div>
+  
+          <div class="box-price">
+            <span class="price-product-has-discount"><span class="monetary-text">R$</span> ${product.price}</span>
+            <span class="price-product-discount"><span class="monetary-text">R$</span> ${product.priceWithDiscount}</span>
+          </div>
+        </div>
+  
+        <div onclick=addProductToShoppingCart("${product.id}") class="box-add-cart">
+          <i class="icon-add-cart fas fa-cart-plus"></i>
         </div>
       </div>
-
-      <div onclick=addProductToShoppingCart("${product.id}") class="box-add-cart">
-        <i class="icon-add-cart fas fa-cart-plus"></i>
-      </div>
-    </div>
-    `;
-
+      `;
+    }
   });
 
+  
+
   featuredProducts.innerHTML += featured;
+
   promotionalProducts.innerHTML+= promotional;
 };
