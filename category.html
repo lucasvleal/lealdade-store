@@ -51,7 +51,7 @@
             <div class="category-item-nav">
                 <a class="name-category-item">Início</a>
             </div>
-            <div class="category-item-nav">
+            <!-- <div class="category-item-nav">
                 <a class="name-category-item">Category</a>
             </div>
             <div class="category-item-nav">
@@ -62,7 +62,7 @@
             </div>
             <div class="category-item-nav">
                 <a class="name-category-item">Category</a>
-            </div>
+            </div> -->
         </div>
     </nav>
 
@@ -72,100 +72,8 @@
             Descrição da categoria
         </h2>  
         
-        <div class="row">
-            <div class="product-card">
-                <div class="box-image-product">
-                    <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
-                </div>
-
-                <div class="box-infos-product">
-                    <div class="box-textual">
-                        <span class="name-product">Name</span>
-                        <span class="description-product">
-                            Description
-                        </span>
-                    </div>
-
-                    <div class="box-price">
-                        <!-- <span class="price-product"><span class="monetary-text">R$</span> 49.90</span> -->
-                        <span class="price-product-has-discount"><span class="monetary-text">R$</span> 49.90</span>
-                        <span class="price-product-discount"><span class="monetary-text">R$</span> 39.50</span>
-                    </div>
-                </div>
-
-                <div class="box-add-cart">
-                    <i class="icon-add-cart fas fa-cart-plus"></i>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="box-image-product">
-                    <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
-                </div>
-
-                <div class="box-infos-product">
-                    <div class="box-textual">
-                        <span class="name-product">Name</span>
-                        <span class="description-product">
-                            Description
-                        </span>
-                    </div>
-
-                    <div class="box-price">
-                        <span class="price-product"><span class="monetary-text">R$</span> 49.90</span>
-                    </div>
-                </div>
-
-                <div class="box-add-cart">
-                    <i class="icon-add-cart fas fa-cart-plus"></i>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="box-image-product">
-                    <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
-                </div>
-
-                <div class="box-infos-product">
-                    <div class="box-textual">
-                        <span class="name-product">Name</span>
-                        <span class="description-product">
-                            Description
-                        </span>
-                    </div>
-
-                    <div class="box-price">
-                        <span class="price-product"><span class="monetary-text">R$</span> 49.90</span>
-                    </div>
-                </div>
-
-                <div class="box-add-cart">
-                    <i class="icon-add-cart fas fa-cart-plus"></i>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="box-image-product">
-                    <img src="https://avatars.githubusercontent.com/u/42481884?s=460&u=32dc019daa63f4e2dd764b41800bbab261f6f5e4&v=4" alt="Imagem de perfil da pessoa">
-                </div>
-
-                <div class="box-infos-product">
-                    <div class="box-textual">
-                        <span class="name-product">Name</span>
-                        <span class="description-product">
-                            Description
-                        </span>
-                    </div>
-
-                    <div class="box-price">
-                        <span class="price-product"><span class="monetary-text">R$</span> 49.90</span>
-                    </div>
-                </div>
-
-                <div class="box-add-cart">
-                    <i class="icon-add-cart fas fa-cart-plus"></i>
-                </div>
-            </div>
+        <div class="row" id="featured-product">
+           
         </div>
 
         
@@ -174,7 +82,8 @@
 
     <!-- PEGAR A CATEGORIA SELECIONADA VIA LOCALSTORAGE -> ALTERAR TITLE TAMBEM
     DEVE TER OS PRODUTOS DISPONIVEIS QUE SÃO DA CATEGORIA ABERTA   -->
-
+    <script src="js/data.js"></script>
     <script src="js/global.js"></script>
+    <script src= "js/category.js"></script>
 </body>
 </html>
