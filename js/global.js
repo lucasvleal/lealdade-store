@@ -1,5 +1,5 @@
 const loadCategories = () => {
-  const menu = document.getElementById("box-categories-items-nav");
+  const menu = document.getElementById('box-categories-items-nav');
   let menuLoaded = "";
   dataCategories.forEach((dataCategorie) => {
     menuLoaded += `<div title="${dataCategorie.description}" class="category-item-nav"> 
@@ -11,7 +11,7 @@ const loadCategories = () => {
 };
 
 const loadProducts = () => {
-  const featuredProducts = document.getElementById("featured-product");
+  const featuredProducts = document.getElementById('featured-product');
   const promotionalProducts = document.getElementById('promotional')
   let featured = '';
   let promotional = '';
@@ -69,7 +69,7 @@ const loadProducts = () => {
   promotionalProducts.innerHTML+= promotional;
 };
 
-window.addEventListener("load", () => {
+window.addEventListener('load', () => {
   const shoppingCart = '@shopping_cart';
   loadCategories();
   loadProducts();
