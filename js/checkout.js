@@ -93,12 +93,14 @@ const getPriceTotalProduct = (id) => {
 }
 
 const removeItem = (id) => {
-    console.log('remove item: ', id);
-
-    const index = products.findIndex((productSearch) => productSearch.id === id);
-
-    products[index].quantity -= 1;
-
+    console.log('add item: ', id);
+    const shoppingCart = '@shopping_cart'
+    const products = JSON.parse(localStorage.getItem(shoppingCart || '[]'));
+    const index = products.findIndex(product => product.id === id);
+    products[index].quantity--;
+    if(products[index].quantity === 0){
+        deleteItem(id);
+    }
     localStorage.setItem(shoppingCart, JSON.stringify(products));
     window.location.reload();
 
@@ -106,18 +108,18 @@ const removeItem = (id) => {
 
 const addItem = (id) => {
     console.log('add item: ', id);
-
-    const index = products.findIndex((productSearch) => productSearch.id === id);
-
-    products[index].quantity += 1;
-
+    const shoppingCart = '@shopping_cart'
+    const products = JSON.parse(localStorage.getItem(shoppingCart || '[]'));
+    const index = products.findIndex(product => product.id === id);
+    products[index].quantity++;
     localStorage.setItem(shoppingCart, JSON.stringify(products));
     window.location.reload();
 }
 
 const deleteItem = (id) => {
     console.log('delete item: ', id);
-
+    const shoppingCart = '@shopping_cart';
+    const products = JSON.parse(localStorage.getItem(shoppingCart) || '[]');
     const index = products.findIndex((productSearch) => productSearch.id === id);
 
     products.splice(index, 1);
@@ -156,13 +158,16 @@ const getCartProducts = () => {
                     </div>
 
                     <div class="box-quantity">
-                        <button onclick="removeItem(${product.id})" class="button-quantity"> 
+                        ${product.quantity>1 ? 
+                            `<button onclick="removeItem('${product.id}')" class="button-quantity"> 
                             <i class="icon-quantity fas fa-minus"></i>
-                        </button>                        
+                        </button>`:
+                         ``
+                        }                        
 
                         <span class="text-quantity">${product.quantity}</span>
 
-                        <button onclick="addItem(${product.id})" class="button-quantity">
+                        <button onclick="addItem('${product.id}')" class="button-quantity">
                             <i class="icon-quantity fas fa-plus"></i>    
                         </button>                        
                     </div>
@@ -172,7 +177,7 @@ const getCartProducts = () => {
                         <span class="price-product">${getPriceTotalProduct(product.id)}</span>
                     </div>
 
-                    <div class="box-trash" onclick="deleteItem(${product.id})">
+                    <div class="box-trash" onclick="deleteItem('${product.id}')">
                         <i class="icon-delete fas fa-trash-alt"></i>
                     </div>
                 </div>

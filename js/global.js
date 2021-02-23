@@ -113,7 +113,7 @@ window.addEventListener('load', () => {
   cart.addEventListener('click', () => {
     window.location.href = "./checkout.html";
   });
-
+  loadShoppingCart();
   const checkoutButton = document.getElementById('checkout-button');
   checkoutButton.addEventListener('click', () => {
     window.location.href = "./checkout.html";
@@ -130,6 +130,7 @@ window.addEventListener('load', () => {
   const location =  window.location.search.replace('?', '');
   
   if(location === ''){
+    loadCategories();
     loadFeaturedProducts();
     loadPromotionalProducts();
   } else{
@@ -137,7 +138,7 @@ window.addEventListener('load', () => {
     loadProductsWithCategorized(id);
   }
   
-  loadShoppingCart();
+  
 });
 
 const addProductToShoppingCart = (id) =>{
