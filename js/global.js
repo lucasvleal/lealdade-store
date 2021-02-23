@@ -1,6 +1,7 @@
 const loadCategories = () => {
   const menu = document.getElementById('box-categories-items-nav');
   let menuLoaded = "";
+  
   dataCategories.forEach((dataCategorie) => {
     menuLoaded += `
       <div title="${dataCategorie.description}" class="category-item-nav"> 
@@ -123,20 +124,22 @@ window.addEventListener('load', () => {
   storeName.addEventListener('click', () => {
     window.location.href = "./index.html";
   });
-
+  loadShoppingCart();
   loadCategories();
   getProfile();
 
   const location =  window.location.search.replace('?', '');
   
   if(location === ''){
-    loadProducts();
+    
+    loadFeaturedProducts();
+    loadPromotionalProducts();
   } else{
     const [, id] = location.split('=');
     loadProductsWithCategorized(id);
   }
   
-  loadShoppingCart();
+  
 });
 
 const addProductToShoppingCart = (id) =>{

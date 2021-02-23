@@ -89,6 +89,7 @@ const dataProducts = [
         "image": "http://d26lpennugtm8s.cloudfront.net/stores/966/181/products/barcelona-futesports71-9b82b185e4859be32815982299047222-640-0.jpg",
         "promotion": false,
         "priceWithDiscount": undefined,
+        "featuredProduct": false,
     },
     {
         "id": "4926863c749e11eb94390242ac130002",
@@ -99,6 +100,7 @@ const dataProducts = [
         "image": "https://images.tcdn.com.br/img/img_prod/498725/camisa_do_chelsea_2020_torcedor_uniforme_titular_3895_1_20190712161855.jpg",
         "promotion": false,
         "priceWithDiscount": undefined,
+        "featuredProduct": false,
     },
     {
         "id": "5172cc56749e11eb94390242ac130002",
@@ -109,6 +111,7 @@ const dataProducts = [
         "image": "https://assets-mantosdofutebol.sfo2.digitaloceanspaces.com/wp-content/uploads/2019/05/Camisas-da-AS-Roma-2019-2020-Nike-3-1.jpg",
         "promotion": true,
         "priceWithDiscount": 210.99,
+        "featuredProduct": false,
     },
 
     // Categoria 3
