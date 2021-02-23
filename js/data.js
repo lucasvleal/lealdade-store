@@ -223,6 +223,23 @@ const dataUsers = [
         }
     },
     {
+        "id": "fe1f99cc756911eb94390242ac130002",
+        "fullName": "Weslley Campos",
+        "nickname": "Weslley",
+        "email": "weslley@gmail.com",
+        "avatar": "https://scontent.fppb2-1.fna.fbcdn.net/v/t1.0-9/57163992_2705302746211819_6514440183633412096_o.jpg?_nc_cat=110&ccb=3&_nc_sid=174925&_nc_ohc=mXw9IVSUfFQAX9iuWVX&_nc_ht=scontent.fppb2-1.fna&oh=118be8245614341b05de16b9cda6bc86&oe=60585A2D",
+        "password": "123456",
+        "birthdate": new Date('1996-02-08'),
+        "address": {
+            "street": "Rua Principal",
+            "number": "100",
+            "neighborhood": "Parque Central",
+            "city": "Assis",
+            "uf": "SP",
+            "zipcode": "19800-010"
+        }
+    },
+    {
         "id": "32866690748a11eb94390242ac130002",
         "fullName": "Wilson Marcílio Junior",
         "nickname": "Wilson",

@@ -1,10 +1,23 @@
-body {
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 15vh 85vh;
-    grid-template-areas: 
-        "header"
-        "content";
+@media (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 15vh 85vh;
+        grid-template-areas: 
+            "header"
+            "content";
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 15vh auto;
+        grid-template-areas: 
+            "header"
+            "content";
+    }
 }
 
 .content {
@@ -68,4 +81,28 @@ span {
 #back-shopping:hover {
     color: #803124;
     transition: 0.2s;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 4vh 4vw;
+    }
+
+    #title-thanks {
+        font-size: 48px;
+    }
+
+    span {
+        font-size: 13px;
+    }
+    
+    .box-address {
+        padding: 20px 40px;
+        margin-top: 20px;
+    }
+        
+    #back-shopping {
+        font-size: 40px;
+        margin: 30px 0;
+    }
 }

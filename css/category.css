@@ -3,3 +3,13 @@
     color: rgba(0,0,0,0.5);
     margin-bottom: 40px;
 }
+
+@media (max-width: 767px) {
+    #title-page {
+        font-size: 40px;
+    }
+
+    #description-category {
+        font-size: 20px;
+    }
+}

@@ -7,3 +7,10 @@
 
     /* background-color: antiquewhite; */
 }
+
+@media (max-width: 768px) {
+    .row-home {
+        align-items: center;
+        justify-items: center;
+    }
+}

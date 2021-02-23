@@ -89,7 +89,7 @@ const getPriceTotalProduct = (id) => {
 
     const total = products[index].quantity * products[index].price;
 
-    return total;
+    return Number(total.toFixed(2));
 }
 
 const removeItem = (id) => {
@@ -191,7 +191,7 @@ const getCartProducts = () => {
 
 
     boxToPutCards.innerHTML = productCards;
-    textTotalShop.innerHTML = `<span class="monetary-text">R$</span> ${total}`;
+    textTotalShop.innerHTML = `<span class="monetary-text">R$</span> ${Number(total.toFixed(2))}`;
 }
 
 window.addEventListener('load', () => {
