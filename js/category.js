@@ -48,6 +48,7 @@ const loadProductsWithCategorized = (categoryId) => {
 
   featuredProducts.innerHTML = categoryProducts;
 
+  document.title = `Lealdad Store | ${category.name}`;
   titleCategory.innerHTML = category.name;
   descriptionCategory.innerHTML = category.description;
 }
