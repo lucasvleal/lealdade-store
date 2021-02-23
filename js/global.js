@@ -130,7 +130,8 @@ window.addEventListener('load', () => {
   const location =  window.location.search.replace('?', '');
   
   if(location === ''){
-    loadProducts();
+    loadFeaturedProducts();
+    loadPromotionalProducts();
   } else{
     const [, id] = location.split('=');
     loadProductsWithCategorized(id);
