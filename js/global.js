@@ -1,6 +1,7 @@
 const loadCategories = () => {
   const menu = document.getElementById('box-categories-items-nav');
   let menuLoaded = "";
+  
   dataCategories.forEach((dataCategorie) => {
     menuLoaded += `
       <div title="${dataCategorie.description}" class="category-item-nav"> 

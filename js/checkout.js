@@ -94,32 +94,42 @@ const getPriceTotalProduct = (id) => {
 
 const removeItem = (id) => {
     console.log('add item: ', id);
-    const shoppingCart = '@shopping_cart'
+
+    const shoppingCart = '@shopping_cart';
     const products = JSON.parse(localStorage.getItem(shoppingCart || '[]'));
+
     const index = products.findIndex(product => product.id === id);
+
     products[index].quantity--;
+
     if(products[index].quantity === 0){
         deleteItem(id);
     }
+
     localStorage.setItem(shoppingCart, JSON.stringify(products));
     window.location.reload();
-
 }
 
 const addItem = (id) => {
     console.log('add item: ', id);
-    const shoppingCart = '@shopping_cart'
+
+    const shoppingCart = '@shopping_cart';
     const products = JSON.parse(localStorage.getItem(shoppingCart || '[]'));
+
     const index = products.findIndex(product => product.id === id);
+
     products[index].quantity++;
+
     localStorage.setItem(shoppingCart, JSON.stringify(products));
     window.location.reload();
 }
 
 const deleteItem = (id) => {
     console.log('delete item: ', id);
+
     const shoppingCart = '@shopping_cart';
     const products = JSON.parse(localStorage.getItem(shoppingCart) || '[]');
+    
     const index = products.findIndex((productSearch) => productSearch.id === id);
 
     products.splice(index, 1);
